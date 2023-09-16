@@ -11,8 +11,7 @@ def load_dict():
     """
     import requests
     response = requests.get("https://www.jsonkeeper.com/b/QUK8")
-    response_json = response.json()
-    return response_json
+    return response.json()
 
 
 def load_random_word(words_dict):
@@ -49,14 +48,14 @@ def word_is_good(player_word, player, random_word):
     if player_word in stop_words:
         return False
 
-    if len(player_word) < 3:
+    elif len(player_word) < 3:
         return "слишком короткое слово"
 
-    if player.check_word_is_used(player_word):
+    elif player.check_word_is_used(player_word):
         return "уже использовано"
 
-    if player_word not in random_word.sub_words:
+    elif player_word not in random_word.sub_words:
         return "неверно"
 
-    if player_word in random_word.sub_words:
+    elif player_word in random_word.sub_words:
         return True
