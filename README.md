@@ -1,0 +1,2 @@
+# course_work_basics_of_programming_folmer_petr_git
+курсовая 2
